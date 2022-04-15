@@ -20,91 +20,128 @@ html {
     color: $pri-color;
   }
   
-  .navbar {
-    width: 85%;
-    // margin: auto;
-    display: flex;
-    position: relative;
-    justify-content: space-between;
-    align-items: center;
-    color: $text-color;
-    height: 10vh;
-    margin-top: 2vh;
-  }
+.navbar {
   
-  .brand-title {
-    font-size: 1.5rem;
-    margin-left: 7%;
-    color: $text-color;
-    font-family: $myFont;
-  }
+  width: 90vw;
+  margin: 0 auto 2%;
+  grid-gap:1%;
+  padding-top: 2%;
+  display: grid;
+  grid-template-columns: 15% 5% 65% 15%;
+  grid-template-rows: 10vh;
+}
+
+.brand-title {
+  display: flex;
+  //border: 1px solid black;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.brand-title img{
+  width:10vw;
+}
+
+.navbar-links{
+  margin: 0;
+  padding: 0;
   
-  .navbar-links ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-  }
+  // border: 1px solid black;
+  // grid-column: 3/4;
+}
+
+.navbar-links ul {
+  margin: .5vh auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
   
-  .navbar-links li {
-    list-style-type: none;
-  }
   
-  .navbar-links li a {
-    display: block;
-    text-decoration: none;
-    border: 1px solid black;
-    color: $text-color;
-    padding: 0.7rem;
-    margin-left: 1rem;
-    font-size: 1rem;
-    background-color: $pri-color;
-    color: white;
-    border-radius: 20px;
-    font-family: $myFont;
-  }
-  
-  .navbar-links li a:hover {
-    background-color: $text-color;
-    color: white;
-    border-radius: 20px;
-    transform: scale(1.05);
-  }
-  
-  .toggle-button {
+}
+
+.navbar-links li {
+  border: 2px solid $pri-color;
+  border-radius: 6px;
+  list-style-type: none;
+  margin-right: 5%;
+}
+
+.navbar-links li a {
+  display: block;
+  text-decoration: none;
+  color: $text-color;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  font-family: $myFont;
+  position: relative;
+  overflow:hidden;
+  transition: .3s;
+  &:after {
     position: absolute;
-    right: 5rem;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 2rem;
-    height: 1.5rem;
+    transition: .3s;
+    content: '';
+    width: 0;
+    left: 50%;
+    bottom: 0;
+    height: 5px;
+    background: #271010;
   }
-  
-  .toggle-button .bar {
-    height: 3px;
-    width: 100%;
-    background-color: black;
-    border-radius: 10px;
+  &:hover {
+    &:after {
+      width: 100%;
+      left: 0;
+    }
   }
-  
-  #theme {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: absolute;
-    top: 0.2rem;
-    right: -7rem;
-    width: 2rem;
-    height: 0.1rem;
-  }
-  #theme img {
-    height: 2rem;
-    border: none;
-    width: 2rem;
-    border-radius: 100%;
-  }
-  
-  .menu-icon {
-    width: 25px;
-    height: 30px;
-  }
+}
+
+.navbar-links li a:after{
+  left: 0;
+}
+
+
+.toggle-bar{
+ //border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.toggle-button {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+}
+
+.toggle-button .bar {
+  display: none;
+  height: 3px;
+  width: 100%;
+  background-color: black;
+  border-radius: 10px;
+}
+
+.theme {
+  //border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.theme img {
+  height: 2rem;
+  border: none;
+  width: 2rem;
+  border-radius: 100%;
+}
+
+.menu-icon {
+  width: 25px;
+  height: 30px;
+}

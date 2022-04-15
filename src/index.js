@@ -5,6 +5,6 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = createRoot(document.getElementById('root'));
-root.render(<App></App>)
+root.render(<App/>)
 
 reportWebVitals();
