@@ -5,6 +5,7 @@ import Button from "../Button/button";
 import "./profile.scss";
 //import profileImage from "../../assets/image/profile.png";
 import Icon from "../Icon/icon";
+import { Link } from "react-router-dom";
 
 
 
@@ -47,8 +48,8 @@ function Profile(props) {
             </span>
           </div>
           <div className="profile-options">
-            <Button>Get Resume</Button>
-            <Button>Hire Me</Button>
+           <Link to='/resume'> <Button>Know Me</Button></Link>
+           <Link to='/'> <Button>Hire Me</Button></Link>
             {/* <button className="btn primary-btn"> Hire Me </button> */}
             {/* <a href="resume.pdf" download={"ashishcv.pdf"}>
               <button className="btn highlighted-btn">Get Resume</button>

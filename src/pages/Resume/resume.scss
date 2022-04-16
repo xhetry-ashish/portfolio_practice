@@ -33,6 +33,7 @@
 
 .resume_wrapper .resume_left .resume_info{
 	color: #84838b;
+	text-align: justify;
 }
 
 .resume_wrapper .resume_left .resume_bottom{
@@ -102,6 +103,8 @@
 	color: #26252d;
 }
 
+
+
 .resume_wrapper .resume_right .resume_namerole .name{
 	color: #26252d;
 	font-size: 32px;
@@ -120,6 +123,10 @@
 	display: flex;
 }
 
+.resume_wrapper .resume_right .resume_data .title{
+	font-weight: bold;
+}
+
 .resume_wrapper .resume_right .resume_data .year{
 	padding-right: 35px;
 	width: 115px;
@@ -130,6 +137,10 @@
 	padding-left: 35px;
 	margin-bottom: 20px;
 	width: calc(100% - 115px);
+}
+
+.resume_wrapper .resume_right .resume_data .content .title{
+	font-weight: bold;
 }
 
 .resume_wrapper .resume_right .resume_data .year:before{
@@ -168,6 +179,11 @@
 	font-size: 38px;
 	color: #0175b2;
 	margin-bottom: 10px;
+}
+
+.resume_wrapper .resume_right .resmue_interests .interests a{
+	text-decoration: none;
+	color: black;
 }
 
 
