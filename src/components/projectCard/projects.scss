@@ -11,7 +11,7 @@ h2 {
 }
 
 #projects {
-    margin-top: 10vh;
+    margin-top: 15vh;
   }
   .cards {
     width: 80vw;
@@ -21,6 +21,7 @@ h2 {
     margin: 5vh 10vw 5vh;
     justify-items: center;
     row-gap: 5vh;
+    
   }
   
   .column {
@@ -28,9 +29,13 @@ h2 {
     flex-direction: column;
     width: 23vw;
     height: 65vh;
-    box-shadow: 0 1px 1px 0 #533027;
+    box-shadow:
+       inset 0 -3em 3em rgba(0,0,0,0.1),
+             0 0  0 2px rgb(255,255,255),
+             0.3em 0.3em 1em rgba(0,0,0,0.3);
+
     padding: 1vh 1vw;
-    opacity: 0.5;
+    //opacity: 0.5;
     align-items: center;
   }
   
@@ -38,7 +43,7 @@ h2 {
     transform: scale(1.05);
     cursor: pointer;
     transition-duration: 600ms;
-    opacity: 1;
+    //opacity: 1;
   }
   
   .projectImg {
