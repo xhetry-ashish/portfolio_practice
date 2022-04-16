@@ -1,4 +1,4 @@
-@import "../../styles/variable";
+@import "../../styles/Sass/variable";
 
 
 html {
@@ -93,11 +93,14 @@ html {
       left: 0;
     }
   }
+  &:after{
+    left: 0;
+  }
 }
 
-.navbar-links li a:after{
-  left: 0;
-}
+// .navbar-links li a:after{
+//   left: 0;
+// }
 
 
 .toggle-bar{

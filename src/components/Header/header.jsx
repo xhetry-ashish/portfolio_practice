@@ -1,17 +1,18 @@
 import React from "react";
 import "./header.scss";
-import toggleImage from "../../assets/image/sun.jpg";
-import logoImage from "../../assets/image/logo1.png";
+//import toggleImage from "../../assets/image/sun.jpg";
+//import logoImage from "../../assets/image/logo1.png";
 import { Link } from "react-router-dom";
+import Rotate from "../Rotation/rotate";
 
-export default function Header() {
+export default function Header(props) {
   return (
     <div>
       <header>
         <nav class="navbar">
           <div class="brand-title">
             <a href="/">
-              <img src={logoImage} alt="no internet" />
+            <Rotate><img src={props.data.logo} alt="no internet" /></Rotate>
             </a>
           </div>
           <div class="toggle-bar">
@@ -25,22 +26,22 @@ export default function Header() {
           <div class="navbar-links">
             <ul>
               <li>
-                <Link to="/project">Projects</Link>
+                <Link to={props.data.link1Path}>{props.data.link1}</Link>
                 {/* <a href="#projects">Projects</a> */}
               </li>
               <li>
-                <Link to="/contact">Contact</Link>
+                <Link to={props.data.link2Path}>{props.data.link2}</Link>
                 {/* <a href="#contact">Contact</a> */}
               </li>
               <li>
-                <Link to="/testimonial">Testimonial</Link>
+                <Link to={props.data.link3Path}>{props.data.link3}</Link>
                 {/* <a href="#contact">Testimonials</a> */}
               </li>
             </ul>
           </div>
           <div class="theme">
             <a onclick="myFunction()" href=" ">
-              <img id="theme-img" src={toggleImage} alt="no load" />
+              <img id="theme-img" src={props.data.toggleImageLight} alt="no load" />
             </a>
           </div>
         </nav>
