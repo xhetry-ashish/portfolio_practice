@@ -23,7 +23,12 @@ const handleSubmit = (e)=>{
   e.preventDefault();
   setFormErrors(validate(formValues));
   setIsSubmit(true);
-  // setFormValues(initialValues);
+  if(Object.keys(formErrors).length === 0 && isSubmit)
+  {
+    window.alert(`${formValues.email},${formValues.message},${formValues.username}`);
+    setFormValues(initialValues);
+  }
+  
 
 }
 
@@ -45,7 +50,7 @@ const validate = (values)=>{
     errors.username = "Username is required!!"
   }
 
-  else if (!nameRegex.test(values.email)) {
+ if (!nameRegex.test(values.username)) {
     errors.username = "Not a valid name!!";
   }
   
