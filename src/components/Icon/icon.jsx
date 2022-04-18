@@ -6,13 +6,13 @@ const Icon = styled.i`
   border: 1px dashed black;
   border-radius: 20%;
   margin: 1rem;
-  color: #dd1414;
+  color: yellow;
   padding: 1rem;
   font-size: 1rem;
   cursor: pointer;
   &:hover {
     //background-color: $text-color;
-    color: #140f0f;
+    //color: #140f0f;
     transform: scale(1.05);
   }
 `;
