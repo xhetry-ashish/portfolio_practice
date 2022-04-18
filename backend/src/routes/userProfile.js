@@ -3,10 +3,11 @@ const route = express.Router();
 const userController = require('../controllers/userProfile')
 
 
-route.get('/', userController.getProfile)
+route.get('/:id', userController.getSingleProfile)
+route.get('/', userController.getAllProfiles)
 route.post('/', userController.addProfile)
-route.patch('/', userController.editProfile)
-route.delete('/', userController.deleteProfile)
+route.patch('/:id', userController.editProfile)
+route.delete('/:id', userController.deleteProfile)
 
 
 module.exports = route;

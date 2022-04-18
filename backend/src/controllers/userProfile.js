@@ -1,7 +1,25 @@
-const  Profile  = require("../models/profile");
+const Profile = require("../models/profile");
+const mongoose = require('mongoose')
 
-const getProfile = (req, res) => {
-  res.status(201).json("user profile is obtained");
+//getting a profile using id
+const getSingleProfile = async (req, res) => {
+  if (!mongoose.isValidObjectId(req.params.id)) {
+    return res.status(400).send("Invalid Profile Id..");
+  }
+
+  const profile = await Profile.findById(req.params.id);
+  if (!profile) {
+    res.status(500).json({ success: false });
+  }
+  res.send(profile);
+};
+//get all profiles
+const getAllProfiles = async (req, res) => {
+  const profile = await Profile.find();
+  if (!profile) {
+    res.status(500).json({ success: false });
+  }
+  res.send(profile);
 };
 
 const addProfile = async (req, res) => {
@@ -26,12 +44,50 @@ const addProfile = async (req, res) => {
   res.status(200).send(profiledata);
 };
 
-const editProfile = (req, res) => {
-  res.status(201).json("user profile is edited");
+const editProfile = async (req, res) => {
+    if(!mongoose.isValidObjectId(req.params.id)){
+        return res.status(400).send("Invalid Profile Id..")
+      }
+    
+      let profiledata = await Profile.findByIdAndUpdate(
+        req.params.id,
+        {
+            name: req.body.name,
+            profileRole: req.body.profileRole,
+            profileTagline: req.body.profileTagline,
+            facebookLink: req.body.facebookLink,
+            instagramLink: req.body.instagramLink,
+            githubLink: req.body.githubLink,
+            linkedinLink: req.body.linkedinLink,
+      },
+      {new:true}
+      );
+    
+      if (!profiledata)
+        return res.status(400).send("The profile cannot be updated..")
+    
+      res.status(200).send(profiledata);
 };
 
-const deleteProfile = (req, res) => {
-  res.status(201).json("user profile deleted");
+const deleteProfile = async (req, res) => {
+    if (!mongoose.isValidObjectId(req.params.id)) {
+        return res.status(400).send("Invalid Profile Id..");
+      }
+    
+      const profile = await Profile.findByIdAndRemove(req.params.id);
+      if (!profile) {
+        res.status(500).json({ success: false });
+      }
+      return res.status(200).json({
+        success:true,
+        message:" profile is deleted.."
+    })
 };
 
-module.exports = { getProfile, addProfile, editProfile, deleteProfile };
+module.exports = {
+  getSingleProfile,
+  getAllProfiles,
+  addProfile,
+  editProfile,
+  deleteProfile,
+};
