@@ -5,7 +5,7 @@ require("dotenv/config");
 
 const databaseConfig = () => {
   mongoose
-    .connect(process.env.CONNECTION_STRING)
+    .connect(process.env.CONNECTION_STRING_ATLAS)
     .then(() => {
       console.log("Database Connection Ready...");
     })

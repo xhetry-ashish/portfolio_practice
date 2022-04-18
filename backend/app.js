@@ -7,6 +7,9 @@ const api = process.env.API;
 const profileRoute = require('./src/routes/userProfile')
 const databaseConfig = require('./config')
 
+//middleware
+app.use(express.json())
+
 
 //routes
 app.use(`${api}user`,profileRoute);
