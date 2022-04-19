@@ -1,13 +1,16 @@
-const express = require('express')
-const route = express.Router();
-const userController = require('../controllers/userProfile')
+//const express = require('express')
+//const route = express.Router();
+//const userController = require('../controllers/userProfile')
+import {Router} from 'express';
+import {getSingleProfile,getAllProfiles,editProfile,addProfile,deleteProfile} from '../controllers/userProfile.js'
+
+const route = Router();
+
+route.get('/:id', getSingleProfile)
+route.get('/', getAllProfiles)
+route.post('/', addProfile)
+route.patch('/:id', editProfile)
+route.delete('/:id', deleteProfile)
 
 
-route.get('/:id', userController.getSingleProfile)
-route.get('/', userController.getAllProfiles)
-route.post('/', userController.addProfile)
-route.patch('/:id', userController.editProfile)
-route.delete('/:id', userController.deleteProfile)
-
-
-module.exports = route;
+export default route;

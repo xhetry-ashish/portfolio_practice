@@ -1,8 +1,10 @@
-const Profile = require("../models/profile");
-const mongoose = require('mongoose')
+
+import mongoose from "mongoose"
+import Profile from '../models/profile.js'
+
 
 //getting a profile using id
-const getSingleProfile = async (req, res) => {
+export const getSingleProfile = async (req, res) => {
   if (!mongoose.isValidObjectId(req.params.id)) {
     return res.status(400).send("Invalid Profile Id..");
   }
@@ -13,8 +15,10 @@ const getSingleProfile = async (req, res) => {
   }
   res.send(profile);
 };
+
+
 //get all profiles
-const getAllProfiles = async (req, res) => {
+export const getAllProfiles = async (req, res) => {
   const profile = await Profile.find();
   if (!profile) {
     res.status(500).json({ success: false });
@@ -22,7 +26,7 @@ const getAllProfiles = async (req, res) => {
   res.send(profile);
 };
 
-const addProfile = async (req, res) => {
+export const addProfile = async (req, res) => {
   let profiledata = new Profile({
     name: req.body.name,
     profileRole: req.body.profileRole,
@@ -44,7 +48,7 @@ const addProfile = async (req, res) => {
   res.status(200).send(profiledata);
 };
 
-const editProfile = async (req, res) => {
+export const editProfile = async (req, res) => {
     if(!mongoose.isValidObjectId(req.params.id)){
         return res.status(400).send("Invalid Profile Id..")
       }
@@ -69,7 +73,7 @@ const editProfile = async (req, res) => {
       res.status(200).send(profiledata);
 };
 
-const deleteProfile = async (req, res) => {
+export const deleteProfile = async (req, res) => {
     if (!mongoose.isValidObjectId(req.params.id)) {
         return res.status(400).send("Invalid Profile Id..");
       }
@@ -84,10 +88,12 @@ const deleteProfile = async (req, res) => {
     })
 };
 
-module.exports = {
-  getSingleProfile,
-  getAllProfiles,
-  addProfile,
-  editProfile,
-  deleteProfile,
-};
+// module.exports = {
+//   getSingleProfile,
+//   getAllProfiles,
+//   addProfile,
+//   editProfile,
+//   deleteProfile,
+// };
+
+
