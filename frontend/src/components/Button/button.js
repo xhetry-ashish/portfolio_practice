@@ -1,5 +1,4 @@
 import styled from "styled-components";
-//@import "../../styles/Sass/variable";
 
 const Button = styled.button`
   display: block;
@@ -11,7 +10,7 @@ const Button = styled.button`
   padding: 1rem;
   font-size: 1.1rem;
   font-weight: bold;
-  font-family: $myFont;
+  font-family: Helvetica, sans-serif;
   position: relative;
   overflow:hidden;
   transition: .3s;
