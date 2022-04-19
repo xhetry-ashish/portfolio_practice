@@ -1,8 +1,4 @@
-// const mongoose = require("mongoose");
-// require("dotenv/config");
 import mongoose from "mongoose";
-import { config } from "dotenv";
-
 
 //database connection
 
