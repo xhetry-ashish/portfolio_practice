@@ -11,15 +11,10 @@ function Projects() {
     axios
       .get("https://api.github.com/users/xhetry-ashish/repos")
       .then((res1) => {
-        res1.data.forEach((items, i) => {
-          axios.get(items.languages_url).then((res2) => {
-            res1.data[i]["language"] = res2.data;
             setProject(res1.data);
             setLoading(false);
           });
-        });
-      });
-  }, []);
+        },[]);
 
   return (
 
@@ -28,9 +23,8 @@ function Projects() {
       <h2>{loading ? "Loading..." : <>My Projects</>}</h2>
       <div className="cards">
         {
-           !project ? <>No data....</> :
+           !project ? <><center>Loading data..</center></> :
           project.map((item) => {
-            console.log(item.language);
             return (
               <div className="column">
                 <div className="projectImg">
