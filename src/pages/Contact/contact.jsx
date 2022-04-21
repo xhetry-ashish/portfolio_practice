@@ -81,21 +81,23 @@ const validate = (values)=>{
         <div class="contactRow">
           <div class="contactInfo">
             <div class="icon-info">
-              <h3>My Info</h3>
+              <div class="title">My Details</div>
             </div>
           </div>
           <div class="contactInfo">
             <div class="icon-info">
               <i class="fa fa-map-marker"></i>
+              <span>Address</span>
             </div>
             <div class="text-info">
-              <span>New Baneshwor</span>
+              <span>New Baneshwor,Kathmandu</span>
             </div>
           </div>
 
           <div class="contactInfo">
             <div class="icon-info">
               <i class="fa fa-envelope"></i>
+              <span>Email</span>
             </div>
             <div class="text-info">
               <span>ashishxhetry2017@gmail.com</span>
@@ -105,6 +107,7 @@ const validate = (values)=>{
           <div class="contactInfo">
             <div class="icon-info">
               <i class="fa fa-phone"></i>
+              <span>Phone</span>
             </div>
             <div class="text-info">
               <span>+977-9844443633</span>
@@ -113,10 +116,8 @@ const validate = (values)=>{
         </div>
 
         <div class="formRow">
-          <div class="formempty"></div>
-          <div class="forminfo">
             <div class="formTitle">
-              <span>Get in Touch</span>
+              <span>Get In Touch</span>
               <p>Feel free to Message me..</p>
             </div>
             <div class="formInput">
@@ -128,7 +129,7 @@ const validate = (values)=>{
                   value={formValues.username}
                   onChange={handleChange}
                 />
-                <p style={{color:"red"}}>{formErrors.username}</p>
+                <span style={{color:"red"}}>{formErrors.username}</span>
                 <input
                   type="text"
                   name="email"
@@ -136,7 +137,7 @@ const validate = (values)=>{
                   value={formValues.email}
                   onChange={handleChange}
                 />
-                <p style={{color:"red"}}>{formErrors.email}</p>
+                <span style={{color:"red"}}>{formErrors.email}</span>
                 <textarea
                   id="subject"
                   name="message"
@@ -144,14 +145,13 @@ const validate = (values)=>{
                   value={formValues.message}
                   onChange={handleChange}
                 ></textarea>
-                <p style={{color:"red"}}>{formErrors.message}</p>
+                 <span style={{color:"red"}}>{formErrors.message}</span>
                 <button ><i class="fa fa-paper-plane"></i>  Send</button>
               </form>
             </div>
           </div>
         </div>
       </div>
-    </div>
   )
 }
 
