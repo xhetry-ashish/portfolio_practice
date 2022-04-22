@@ -1,3 +1,5 @@
+@import '../../styles//Sass/variable';
+
 .profile-container {
   display: flex;
   align-items: center;
@@ -13,6 +15,7 @@
 }
 
 .profile-details-name {
+
   font-size: 24px;
   font-family: "Poppins SemiBold";
 }
@@ -64,14 +67,15 @@
 }
 
 .primary-text {
-  color: (--white);
+  color: $bg-color-dark;
 }
 
 .highlighted-text {
-  color: var(--dark-orange);
+  color: $icon-color;
 }
 
 .profile-role-tagline {
+  color: $bg-color-dark;
   font-size: 19px;
   margin: 5px 0px 0px 0px;
   font-family: "Poppins Light";
@@ -97,7 +101,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 1px 0px 0px black;
+  box-shadow: 0 5px 0px 0px $bg-color-dark;
   border-radius: 50%;
   height: 380px;
   width: 380px;
