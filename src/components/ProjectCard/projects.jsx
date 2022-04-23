@@ -32,6 +32,7 @@ function Projects() {
                 </div>
                 <h3>{item.name}</h3>
                 <p>{item.description}</p>
+                <span>9th april, 2022</span>
                 <a
                   href={item.html_url}
                   target="_blank"

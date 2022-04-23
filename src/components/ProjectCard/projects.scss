@@ -15,53 +15,64 @@ h2 {
 }
 .cards {
   width:90vw;
-  margin: 5vh 5vw 5vh;
+  margin: 15vh 5vw 5vh;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content:space-between;
-  row-gap: 5vw;
+  row-gap: 7vw;
 }
 
 .column {
-
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   flex-basis: 32%;
-  height: 60vh;
-  box-shadow: 0 1px 1px $bg-color-dark;
+  height: 45vh;
+  border-radius: 10%;
+  //border-radius:  30% 0 30% 0;
+  box-shadow: 0px 3px 10px 3px rgb(170 170 173 / 0.5);
   padding: 1vh 1vw;
+  //border: 1px solid black;
 }
 
 .column:hover {
-  transform: scale(1.03);
-  cursor: pointer;
-  transition-duration: 200ms;
+  //transform: scale(1.03);
+  transform: translateY(-20px);
+  transition: transform 1s ease-in-out;
 }
 
 .projectImg {
-  width: 100%;
-  height: 25vh;
+      position: relative;
+      left: 0;
+      right: 0;
+      top: -80px;
+      text-align: center;
+      //z-index: 1;
+      
+      
 }
 
 .projectImg img {
-  height: 100%;
-  width: 100%;
-  object-fit: contain;
+  width: 150px;
+  height: 150px;
+  object-fit:fill;
+  // border: 1px solid rgb(170 170 173/ 1);
+  box-shadow: 0px 3px 10px 3px rgba(114, 114, 117, 0.5);
+  border-radius: 50%;
+  z-index: 1;
 }
 
 h3 {
+ margin-top: -10vh;
   text-align: center;
   font-family: $myFont;
   font-size: 1.5rem;
-  color: $bg-color-dark;
 }
 
 .column p {
   //padding: 2px;
-  color: $bg-color-dark;
   text-align: center;
   font-family: $myFont;
   font-size: 1rem;
@@ -73,22 +84,18 @@ h3 {
 
 .column button {
   border: none;
-  color: $btn-text;
+  color: white;
   padding: 1rem;
-  border: 2px solid $bg-color-dark;
-  font-weight: bold;
   border-radius: 6px;
-  background-color: $bg-color-light;
+  background-color: $pri-color;
   cursor: pointer;
   font-size: 1rem;
 }
 
 .column button:hover {
-  // background-color: $text-color;
-  // color: white;
-  transform: scale(1.1);
+  background-color: $text-color;
+  color: white;
 }
-
 
 //tablet-devices
 @media (min-width:426px) and (max-width: 769px) {
@@ -96,13 +103,19 @@ h3 {
     font-size: 87%;
   }
  
-  .cards{
+  .cards {
     justify-content: space-around;
-  }
-  
-    .cards .column {
-      flex-basis: 45%;
+    row-gap: 13vh;
+
+  .column {
+    flex-basis: 45%;
+    height: 30vh;
+
+    .projectImg{
+      top:  -100px;;
     }
+  }
+}
 
 }
 
@@ -111,12 +124,26 @@ h3 {
   html {
     font-size: 68.75%;
   }
-  .cards{
+  .cards {
     justify-content: center;
-  }
-    .cards .column {
-      flex-basis: 70%;
+    row-gap: 13vh;
+  
+  .column {
+    flex-basis: 70%;
+    height: 25vh;
+  
+    .projectImg{
+      top:  -90px;
+  
+      img{
+        width:120px;
+        height:120px;
+        border-radius: 50%;
+      }
     }
+  }
+  }
+  
   
 
 }
