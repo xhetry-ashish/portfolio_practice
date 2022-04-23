@@ -38,7 +38,6 @@ h2 {
 }
 
 .column:hover {
-  //transform: scale(1.03);
   transform: translateY(-20px);
   transition: transform 1s ease-in-out;
 }
@@ -105,14 +104,20 @@ h3 {
  
   .cards {
     justify-content: space-around;
-    row-gap: 13vh;
+    margin-top: 20vh;
+    row-gap: 20vh;
 
   .column {
     flex-basis: 45%;
-    height: 30vh;
+    height: 50vh;
 
     .projectImg{
-      top:  -100px;;
+      top:  -60px;
+      img{
+        width:120px;
+        height:120px;
+        border-radius: 50%;
+      }
     }
   }
 }
@@ -126,24 +131,23 @@ h3 {
   }
   .cards {
     justify-content: center;
-    row-gap: 13vh;
+    row-gap: 20vh;
+    margin-top: 20vh;
   
   .column {
     flex-basis: 70%;
-    height: 25vh;
+    height: 45vh;
   
     .projectImg{
-      top:  -90px;
+      top:  -70px;
   
       img{
-        width:120px;
-        height:120px;
+        width:110px;
+        height:110px;
         border-radius: 50%;
       }
     }
   }
   }
-  
-  
 
 }
