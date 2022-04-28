@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./projects.scss";
 import axios from "axios";
+import projectImage from '../../assets/image/cvprofile.jpg'
 
 function Projects() {
   const [project, setProject] = useState(null);
@@ -9,40 +10,42 @@ function Projects() {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("https://api.github.com/users/xhetry-ashish/repos")
+      //.get("https://api.github.com/users/xhetry-ashish/repos")
+      .get("http://localhost:3001/api/v1/github/")
       .then((res1) => {
-            setProject(res1.data);
+            setProject(res1.data.data);
             setLoading(false);
           });
         },[]);
 
+
   return (
 
     <div>
-
+      
       <h2>{loading ? "Loading..." : <>My Projects</>}</h2>
       <div className="cards">
         {
-           !project ? <><center>Loading data..</center></> :
-          project.map((item) => {
-            return (
+           !project ? <><center></center></> :
+          project.map((item) => { 
+             return ( 
               <div className="column">
                 <div className="projectImg">
-                  <img src={item.owner.avatar_url} alt="pr_img" />
+                  <img src={projectImage} alt="pr_img" />
                 </div>
-                <h3>{item.name}</h3>
+                <h3>{item.projectname.toUpperCase()}</h3>
                 <p>{item.description}</p>
-                <span>9th april, 2022</span>
+               
                 <a
-                  href={item.html_url}
+                  href={item.githubLink}
                   target="_blank"
                   rel="noreferrer noopener"
                 >
                   <button> Github Link</button>
                 </a>
               </div>
-            );
-          })
+             )
+         })
         }
       </div>
     </div>

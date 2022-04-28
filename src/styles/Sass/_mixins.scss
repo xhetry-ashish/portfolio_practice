@@ -5,11 +5,10 @@
   border-radius: 100%;
 }
 
-
-
 @mixin clamper($lines-to-clamp) {
   display: -webkit-box;
   -webkit-line-clamp: $lines-to-clamp;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
