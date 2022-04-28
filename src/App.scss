@@ -1,14 +1,5 @@
- //@import './styles/Sass/variable';
+ @import './styles/Sass/variable';
 
-// .lightTheme{
-//     background-color: #dde5ee;
-// }
-
-// .darkTheme{
-//     background-color: #1f2833;
-// }
-
-// body.dark-theme{
-//     $bg-color-light: black ;
-//     $icon-color: red;
-// }
+body{
+    background-color: $bg-color;
+}

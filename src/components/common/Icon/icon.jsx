@@ -6,7 +6,7 @@ const Icon = styled.i`
   //border: 1px dashed black;
   //border-radius: 20%;
   margin: 1rem;
-  color: #0e6d67;
+  color: #7B3E16;
   padding: 1rem;
   font-size: 2rem;
   cursor: pointer;
