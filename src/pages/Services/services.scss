@@ -1,0 +1,104 @@
+@import "../../styles/Sass/variable";
+
+h2 {
+  margin-top: 17vh;
+  text-align: center;
+  color: $text-color;
+  font-family: $myFont;
+  font-size: 2.5rem;
+}
+
+.ser-container{
+    width: 85vw;
+    margin: 7vh 5vw 5vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    row-gap: 7vw;
+}
+
+ .ser-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-basis: 32%;
+  height: 60vh;
+  border-radius: 10%;
+  box-shadow: 0px 3px 10px 3px rgb(170 170 173 / 0.5);
+  padding: 1vh 1vw;
+}
+
+ .ser-col:hover {
+  transform: translateY(-20px);
+  transition: transform 1s ease-in-out;
+}
+
+.ser-img {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 50%;
+  border: 1px solid black;
+  width: 100%;
+}
+
+.ser-img  img {
+  flex-basis: 100%;
+  object-fit: contain;
+}
+
+.ser-col .title {
+  text-align: center;
+  font-family: $myFont;
+  font-size: 1.5rem;
+}
+
+.ser-col .details {
+  text-align: center;
+  font-family: $myFont;
+  font-size: 1rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+
+//tablet-devices
+@media (min-width: 426px) and (max-width: 769px) {
+  html {
+    font-size: 87%;
+  }
+
+  .ser-container {
+    justify-content: space-around;
+    margin-top: 5vh;
+    row-gap: 10vh;
+
+    .ser-col {
+      flex-basis: 45%;
+      height: 60vh;
+
+    }
+  }
+}
+
+//mobile-devices
+@media (max-width: 425px) {
+  html {
+    font-size: 68.75%;
+  }
+  .ser-container {
+    justify-content: center;
+    row-gap: 10vh;
+    margin-top: 5vh;
+
+    .ser-col {
+      flex-basis: 70%;
+      height: 60vh;
+
+    }
+  }
+}

@@ -1,10 +1,8 @@
-import RoutePath from './components/Route/route'
-import './App.scss'
+import RoutePath from "./components/Route/route";
+import "./App.scss";
 
 function App() {
-  return (
-     <RoutePath ></RoutePath>
-  );
+  return <RoutePath />;
 }
 
 export default App;

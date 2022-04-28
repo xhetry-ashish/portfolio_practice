@@ -1,10 +1,8 @@
 import React from "react";
 import emoji from "react-easy-emoji";
-//import TypeWriterEffect from "react-typewriter-effect";
-import Button from "../Button/button";
+import Button from "../common/Button/button";
 import "./profile.scss";
-//import profileImage from "../../assets/image/profile.png";
-import Icon from "../Icon/icon";
+import Icon from "../common/Icon/icon";
 import { Link } from "react-router-dom";
 
 
@@ -37,7 +35,7 @@ function Profile(props) {
               Hello, It's me <span className="highlighted-text">{props.data.name}</span>
             </span>
           </div>
-          <h2><span className="wave-emoji">{emoji("👋")}</span></h2>
+          <span className="wave-emoji">{emoji("👋")}</span>
           <div className="profile-details-role">
             <span className="primary-text">
               <h1>{props.data.profileRole}

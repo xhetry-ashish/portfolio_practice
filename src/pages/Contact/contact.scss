@@ -6,33 +6,34 @@
 
 
 h2 {
+  margin-top:17vh;
   text-align: center;
   color: $text-color;
   font-family: $myFont;
   font-size: 2.5rem;
 }
+
 /* contact section */
-#contact {
-  margin-top: 10vh;
-}
 
 .outerRow {
   width: 100vw;
-  height: 80vh;
+  height: 75vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  column-gap: 3%;
  
 }
 .contactRow {
   height: 60vh;
   flex-basis: 25vw;
-  background-color: $pri-color;
+  background-color: $div-bg-color;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;  
+  border-radius: 10%;
 }
 
 .contactInfo {
@@ -43,7 +44,7 @@ h2 {
 
 .icon-info {
   font-size: 120%;
-  color: $sec-color;
+  color: $icon-color;
   display: flex;
   flex-direction: row;
   column-gap: 15%;
@@ -59,7 +60,7 @@ h2 {
 }
 
 .text-info {
-  color: $sec-color;
+  color: $text-color;
   font-family: $myFont;
   font-size: 1rem;
   word-wrap: break-word;
@@ -75,6 +76,7 @@ h2 {
   justify-content:space-evenly;  
   align-items: center;
   box-shadow: 0 2px 4px 0 #533027;
+  border-radius: 10%;
 
     .formTitle {
       font-family: $myFont;
@@ -96,14 +98,19 @@ h2 {
       align-items: center;
       input,
       textarea {
+        
         width: 30vw;
         height: fit-content;
         padding: 10px;
         border: 1px solid rgb(22, 21, 21);
         border-radius: 6px;
       }
+      textarea {
+        resize: none;
+        height: 70px;
+     }
       button {
-        background-color: $pri-color;
+        background-color: $icon-color;
         color: white;
         padding: 12px 20px;
         border: none;

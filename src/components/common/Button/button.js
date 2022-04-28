@@ -1,10 +1,9 @@
 import styled from "styled-components";
 
 const Button = styled.button`
-  display: block;
   border: 2px solid $pri-color;
   border-radius: 6px;
-  cursor:pointer;
+  cursor: pointer;
   text-decoration: none;
   color: $text-color;
   padding: 1rem;
@@ -12,12 +11,12 @@ const Button = styled.button`
   font-weight: bold;
   font-family: Helvetica, sans-serif;
   position: relative;
-  overflow:hidden;
-  transition: .3s;
+  overflow: hidden;
+  transition: 0.3s;
   &:after {
     position: absolute;
-    transition: .3s;
-    content: '';
+    transition: 0.3s;
+    content: "";
     width: 0;
     left: 50%;
     bottom: 0;
@@ -30,10 +29,9 @@ const Button = styled.button`
       left: 0;
     }
   }
-  &:after{
+  &:after {
     left: 0;
   }
-`
+`;
 
-
-export default Button
+export default Button;

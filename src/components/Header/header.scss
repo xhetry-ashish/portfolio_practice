@@ -1,6 +1,5 @@
 @import "../../styles/Sass/variable";
 
-
 html {
     font-size: 100%;
   }
@@ -8,32 +7,30 @@ html {
   * {
     padding: 0;
     box-sizing: border-box;
-    margin: 0px;
+    margin: 0;
   }
   
-  .dark-mode {
-    background-color: $sec-color;
-    color: $pri-color;
-  }
+  
   
   .navbar {
-  
     width: 85vw;
-    border: 2px solid $pri-color;
+    border: 2px solid $div-bg-color;
     border-radius: 10px;
-    margin:  1% 7%;
+    margin:  0% 7%;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     column-gap: 5%;
     align-items: center;
-    height: 12vh;
+    height: 13vh;
+    position: fixed;
+    top:10px;
+    //background-color: $div-bg-color;
   }
   
   .brand-title {
     display: flex;
     flex-basis: 5%;
-    //border: 1px solid black;
     justify-content: flex-start;
     align-items: center;
   }
@@ -42,7 +39,6 @@ html {
     width:10vh;
     height: 20vh;
     object-fit: contain;
-    //fill: $pri-color;
     filter: opacity(.4)  sepia(100%); 
   }
   
@@ -50,7 +46,6 @@ html {
     margin: 0;
     padding: 0;
     flex-basis: 70%;
-    //border: 1px solid black;
   }
   
   .navbar-links ul {
@@ -64,7 +59,6 @@ html {
   }
   
   .navbar-links li {
-   // border: 2px solid $pri-color;
     border-radius: 6px;
     list-style-type: none;
   }
@@ -102,38 +96,13 @@ html {
     left: 0;
   }
   
-  .toggle-row{
-    flex-basis: 20%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    column-gap: 25%;
-    align-items: center;
-  }
+
   .toggle-bar{
-   //border: 1px solid black;
   display: none;
+  flex-basis: 10%;
   size: 10%;
   color: $icon-color;
   
-  }
-
-  
-  .theme {
-    //border: 1px solid black;
-    flex-basis: 5%;
-  }
-  
-  .theme img {
-    height: 2rem;
-    border: none;
-    width: 2rem;
-    border-radius: 100%;
-  }
-  
-  .menu-icon {
-    width: 25px;
-    height: 30px;
   }
 
 //tablet screen
@@ -164,9 +133,8 @@ html {
   ul{
     display: flex;
     flex-direction: column;
-    //justify-content: space-between;
     align-items: flex-end;
-     row-gap: 4vh;
+    row-gap: 4vh;
     z-index: -8;
     li{
       list-style-type: none;

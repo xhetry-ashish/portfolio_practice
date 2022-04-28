@@ -71,56 +71,53 @@ const validate = (values)=>{
   return errors;
 
 }
-
-
-
   return (
     <div>
         <h2>Contact Me</h2>
-      <div class="outerRow">
-        <div class="contactRow">
-          <div class="contactInfo">
-            <div class="icon-info">
-              <div class="title">My Details</div>
+      <div className="outerRow">
+        <div className="contactRow">
+          <div className="contactInfo">
+            <div className="icon-info">
+              <div className="title">My Details</div>
             </div>
           </div>
-          <div class="contactInfo">
-            <div class="icon-info">
-              <i class="fa fa-map-marker"></i>
+          <div className="contactInfo">
+            <div className="icon-info">
+              <i className="fa fa-map-marker"></i>
               <span>Address</span>
             </div>
-            <div class="text-info">
+            <div className="text-info">
               <span>New Baneshwor,Kathmandu</span>
             </div>
           </div>
 
-          <div class="contactInfo">
-            <div class="icon-info">
-              <i class="fa fa-envelope"></i>
+          <div className="contactInfo">
+            <div className="icon-info">
+              <i className="fa fa-envelope"></i>
               <span>Email</span>
             </div>
-            <div class="text-info">
+            <div className="text-info">
               <span>ashishxhetry2017@gmail.com</span>
             </div>
           </div>
 
-          <div class="contactInfo">
-            <div class="icon-info">
-              <i class="fa fa-phone"></i>
+          <div className="contactInfo">
+            <div className="icon-info">
+              <i className="fa fa-phone"></i>
               <span>Phone</span>
             </div>
-            <div class="text-info">
+            <div className="text-info">
               <span>+977-9844443633</span>
             </div>
           </div>
         </div>
 
-        <div class="formRow">
-            <div class="formTitle">
+        <div className="formRow">
+            <div className="formTitle">
               <span>Get In Touch</span>
               <p>Feel free to Message me..</p>
             </div>
-            <div class="formInput">
+            <div className="formInput">
               <form action="" onSubmit={handleSubmit}>
                 <input
                   type="text"
@@ -146,7 +143,7 @@ const validate = (values)=>{
                   onChange={handleChange}
                 ></textarea>
                  <span style={{color:"red"}}>{formErrors.message}</span>
-                <button ><i class="fa fa-paper-plane"></i>  Send</button>
+                <button ><i className="fa fa-paper-plane"></i>  Send</button>
               </form>
             </div>
           </div>
