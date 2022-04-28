@@ -47,11 +47,7 @@ function Profile(props) {
           </div>
           <div className="profile-options">
            <Link to='/resume'> <Button>Know Me</Button></Link>
-           <Link to='/'> <Button>Hire Me</Button></Link>
-            {/* <button className="btn primary-btn"> Hire Me </button> */}
-            {/* <a href="resume.pdf" download={"ashishcv.pdf"}>
-              <button className="btn highlighted-btn">Get Resume</button>
-            </a> */}
+           <Link to='/contact'> <Button>Hire Me</Button></Link>
           </div>
         </div>
         <div className="profile-picture">

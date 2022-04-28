@@ -28,12 +28,13 @@ h2 {
 .contactRow {
   height: 60vh;
   flex-basis: 25vw;
-  background-color: $div-bg-color;
+  background-color: $div-bg;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;  
   border-radius: 10%;
+  background-color: $cart-bg;
 }
 
 .contactInfo {
@@ -53,6 +54,7 @@ h2 {
 .icon-info .title{
   font-size: 2rem;
   font-weight: bold;
+  color: $text-color;
 }
 
 .icon-info span{
@@ -70,12 +72,11 @@ h2 {
 .formRow {
   height: 70vh;
   flex-basis:40vw;
-  background-color: white;
+  background-color: $cart-bg;
   display: flex;
   flex-direction: column;
   justify-content:space-evenly;  
   align-items: center;
-  box-shadow: 0 2px 4px 0 #533027;
   border-radius: 10%;
 
     .formTitle {
@@ -135,6 +136,7 @@ h2 {
   .outerRow{
     flex-wrap: wrap-reverse;
     height:max-content;
+    row-gap: 5vh;
   }
 
   .contactRow {

@@ -1,14 +1,11 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import "./header.scss";
 //import toggleImage from "../../assets/image/sun.jpg";
 //import logoImage from "../../assets/image/logo1.png";
 import { Link } from "react-router-dom";
-import Rotate from "../Rotation/rotate";
-
 
 export default function Header(props) {
-
-  const [isMobile,setMobile]= useState(false);
+  const [isMobile, setMobile] = useState(false);
 
   return (
     <div>
@@ -16,13 +13,14 @@ export default function Header(props) {
         <nav className="navbar">
           <div className="brand-title">
             <a href="/">
-              <Rotate>
-                <img src={props.data.logo} alt="no internet" />
-              </Rotate>
+              <img src={props.data.logo} alt="no internet" />
             </a>
           </div>
 
-          <div className={isMobile ? "navbar-links-mobile" : "navbar-links"} onClick={()=> setMobile(false)}>
+          <div
+            className={isMobile ? "navbar-links-mobile" : "navbar-links"}
+            onClick={() => setMobile(false)}
+          >
             <ul>
               <li>
                 <Link to={props.data.link1Path}>{props.data.link1}</Link>
@@ -35,7 +33,7 @@ export default function Header(props) {
               </li>
             </ul>
           </div>
-          <div className="toggle-bar" onClick={()=> setMobile(!isMobile)}>
+          <div className="toggle-bar" onClick={() => setMobile(!isMobile)}>
             <i className="fa-solid fa-bars"></i>
           </div>
         </nav>

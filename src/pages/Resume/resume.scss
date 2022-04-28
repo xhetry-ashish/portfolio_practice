@@ -1,16 +1,17 @@
-
+@import '../../styles//Sass//variable';
 
 .resume_wrapper{
 	display: flex;
 	width: 90vw;
 	margin: 50px auto;
-	background: #fff;
+	background: $cart-bg;
 	padding: 10px;
+	margin-top: 17vh;
 }
 
 .resume_wrapper .resume_left{
 	width: 35%;
-	background: #26252d;
+	background: $bg-color;
 }
 
 .resume_wrapper .resume_left .resume_image{
@@ -23,7 +24,7 @@
 }
 
 .resume_wrapper .resume_title{
-	color: #fff;
+	color: $text-color;
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: 16px;
@@ -32,7 +33,7 @@
 }
 
 .resume_wrapper .resume_left .resume_info{
-	color: #84838b;
+	color: $text-color;
 	text-align: justify;
 }
 
@@ -42,7 +43,7 @@
 
 .resume_wrapper .resume_item{
 	padding: 20px 0;
-	border-bottom: 1px solid #0175b2;
+	border-bottom: 1px solid $icon-color;
 }
 
 .resume_wrapper  .resume_item:last-child{
@@ -55,7 +56,7 @@
 
 .resume_wrapper .resume_namerole .name{
 	font-size: 20px;
-	color: #fff;
+	color: $text-color;
 	text-transform: uppercase;
 	font-weight: 700;
 	margin-bottom: 5px;
@@ -71,7 +72,7 @@
 }
 
 .resume_wrapper .resume_left .resume_contact .resume_subtitle{
-	color: #fff;
+	color: $text-color;
 	margin-bottom: 2px;
 }
 
@@ -92,7 +93,7 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	background: #0175b2;
+	background: $icon-color;
 	width: 100%;
 	height: 100%;
 }
@@ -177,7 +178,7 @@
 
 .resume_wrapper .resume_right .resmue_interests .interests .int_icon{
 	font-size: 38px;
-	color: #0175b2;
+	color: $icon-color;
 	margin-bottom: 10px;
 }
 
@@ -188,6 +189,13 @@
 
 
 @media screen and (max-width: 800px){
+	
+	.resume_wrapper{
+		margin-top: 17vh !important;
+	}
+
+
+
 	.resume_wrapper .resume_right .resume_namerole{
 		display: none;
 	}
@@ -206,6 +214,9 @@
 }
 
 @media screen and (max-width: 424px){
+	.resume_wrapper{
+		margin-top: 17vh;
+	}
 	.resume_wrapper .resume_right{
 		padding: 20px 30px;
 	}
@@ -216,7 +227,6 @@
 		padding: 0;
 		margin-bottom: 5px;
 		width: 100%;
-		color: #0175b2;
 	}
 	.resume_wrapper .resume_right .resume_data .year:before,
 	.resume_wrapper .resume_right .resume_data .year:after{
