@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./contact.scss";
 import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Contact() {
   const initialValues = { username: "", email: "", message: "" };
@@ -31,7 +33,7 @@ function Contact() {
           .then((res) => {
             if (res.data.mailSent) {
               setFormValues(initialValues);
-              window.alert("Your response is Saved");
+              toast("Message Send Successfully..");
             }
           });
       }
@@ -143,6 +145,7 @@ function Contact() {
               ></textarea>
               <span style={{ color: "red" }}>{formErrors.message}</span>
               <button type="submit">Send</button>
+              <ToastContainer/>
             </form>
           </div>
         </div>

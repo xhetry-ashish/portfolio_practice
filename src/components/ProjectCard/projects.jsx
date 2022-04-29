@@ -3,6 +3,7 @@ import "./projects.scss";
 import axios from "axios";
 import projectImage from '../../assets/image/github.png'
 
+
 function Projects() {
   const [project, setProject] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -35,7 +36,7 @@ function Projects() {
                 </div>
                 <h3>{item.projectname.toUpperCase()}</h3>
                 <p>{item.description}</p>
-                <p>{new Date(item.dateCreated).toDateString()}</p>
+                <p>Created On: {new Date(item.dateCreated).toDateString()}</p>
                 <a
                   href={item.githubLink}
                   target="_blank"

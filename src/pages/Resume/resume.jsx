@@ -191,6 +191,7 @@ function resume() {
               <div className="interests">
                 <div className="int_icon">
                   <i className="fa fa-instagram"></i>
+                 
                 </div>
                 <a
                   href="https://www.instagram.com/xhetryashish/"
