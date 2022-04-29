@@ -1,12 +1,8 @@
-
-
 @import "../../styles/Sass/variable";
 @import "../../styles/Sass/mixins";
 
-
-
 h2 {
-  margin-top:17vh;
+  margin-top: 17vh;
   text-align: center;
   color: $text-color;
   font-family: $myFont;
@@ -23,7 +19,6 @@ h2 {
   justify-content: center;
   align-items: center;
   column-gap: 3%;
- 
 }
 .contactRow {
   height: 60vh;
@@ -32,7 +27,7 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;  
+  justify-content: space-evenly;
   border-radius: 10%;
   background-color: $cart-bg;
 }
@@ -48,16 +43,18 @@ h2 {
   color: $icon-color;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
   column-gap: 15%;
 }
 
-.icon-info .title{
+.icon-info .title {
   font-size: 2rem;
   font-weight: bold;
   color: $text-color;
 }
 
-.icon-info span{
+.icon-info span {
   font-size: 1.5rem;
 }
 
@@ -71,71 +68,68 @@ h2 {
 /* form  */
 .formRow {
   height: 70vh;
-  flex-basis:40vw;
+  flex-basis: 40vw;
   background-color: $cart-bg;
   display: flex;
   flex-direction: column;
-  justify-content:space-evenly;  
+  justify-content: space-evenly;
   align-items: center;
   border-radius: 10%;
 
-    .formTitle {
-      font-family: $myFont;
-      line-height: 1.5rem;
-      span {
-        font-size: 2rem;
-        font-weight: bold;
-      }
-      p {
-        font-size: 1rem;
-      }
+  .formTitle {
+    font-family: $myFont;
+    line-height: 1.5rem;
+    span {
+      font-size: 2rem;
+      font-weight: bold;
     }
-
-    .formInput form{
-      display: flex;
-      flex-direction: column;
-      row-gap: 2vh;
-      justify-content:space-evenly; 
-      align-items: center;
-      input,
-      textarea {
-        
-        width: 30vw;
-        height: fit-content;
-        padding: 10px;
-        border: 1px solid rgb(22, 21, 21);
-        border-radius: 6px;
-      }
-      textarea {
-        resize: none;
-        height: 70px;
-     }
-      button {
-        background-color: $icon-color;
-        color: white;
-        padding: 12px 20px;
-        border: none;
-        border-radius: 10px;
-        cursor: pointer;
-
-        &:hover {
-         
-          color: whitesmoke;
-          transform: scale(1.05);
-        }
-      }
+    p {
+      font-size: 1rem;
     }
   }
 
+  .formInput form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+    justify-content: space-evenly;
+    align-items: center;
+    input,
+    textarea {
+      width: 30vw;
+      height: fit-content;
+      padding: 10px;
+      border: 1px solid rgb(22, 21, 21);
+      border-radius: 6px;
+    }
+    textarea {
+      resize: none;
+      height: 70px;
+    }
+    button {
+      background-color: $icon-color;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
 
-  //mobile-devices
+      &:hover {
+        color: whitesmoke;
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+//mobile-devices
 @media (max-width: 425px) {
   html {
     font-size: 68.75%;
   }
-  .outerRow{
+  .outerRow {
     flex-wrap: wrap-reverse;
-    height:max-content;
+    height: max-content;
     row-gap: 5vh;
   }
 
@@ -144,13 +138,13 @@ h2 {
     height: 50vh;
   }
 
-
   .formRow {
     flex-basis: 70%;
 
-    .formInput{
-      form{
-        input,textarea{
+    .formInput {
+      form {
+        input,
+        textarea {
           width: 50vw;
         }
       }
@@ -158,9 +152,8 @@ h2 {
   }
 }
 
-
 //tablet-devices
-@media (min-width:426px) and (max-width: 769px) {
+@media (min-width: 426px) and (max-width: 769px) {
   html {
     font-size: 87%;
   }
@@ -168,7 +161,7 @@ h2 {
     flex-basis: 40%;
   }
 
-  .formRow{
+  .formRow {
     flex-basis: 50%;
   }
 }
