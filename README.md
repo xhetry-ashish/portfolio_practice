@@ -20,7 +20,7 @@ Project is created with following packages:
 *  react-dom
 *  react-router-dom
 *  react-scripts
-*  react-easy-emoji
+*  react-toastify
 *  sass
 *  sass-loader
 *  styled-components
