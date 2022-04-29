@@ -12,8 +12,7 @@ function testimonial() {
             <img src={node} alt=''></img>
           </div>
           <span className="title">Mobile App Development</span>
-          <span className="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex aperiam atque consequatur asperiores aut nemo sequi quidem at 
-          quasi perferendis temporibus dolore nesciunt fuga, architecto fugit iure quam! Assumenda, velit! </span>
+          <span className="details">Delevering a quality responsive mobile app as of your need.</span>
         </div>
 
         <div className="ser-col">
@@ -21,17 +20,15 @@ function testimonial() {
             <img src={node} alt=''></img>
           </div>
           <span className="title">Web App Development</span>
-          <span className="details">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae ratione doloribus beatae possimus! Saepe quia culpa hic aut.
-           Labore assumenda atque quibusdam facilis, rerum error vitae quidem totam consequuntur doloribus? </span>
+          <span className="details">Delevering a quality responsive web app as of your need. </span>
         </div>
 
         <div className="ser-col">
           <div className="ser-img">
             <img src={node} alt=''></img>
           </div>
-          <span className="title">QA</span>
-          <span className="details">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint ea iusto, illo, exercitationem culpa vitae officia incidunt 
-          dolores explicabo quos neque minima commodi eaque laudantium tempore optio doloremque debitis repellendus. </span>
+          <span className="title">Software Testing</span>
+          <span className="details">Testing your developed system for more improvement and quality assurance</span>
         </div>
 
       </div>

@@ -40,19 +40,21 @@ h2 {
   flex-direction: row;
   justify-content: center;
   height: 50%;
-  
-  width: 100%;
+  width: 60%;
 }
 
 .ser-img  img {
   flex-basis: 100%;
-  object-fit: contain;
+  object-fit: fill;
+  border-radius: 20px;
+  
 }
 
 .ser-col .title {
   text-align: center;
   font-family: $myFont;
   font-size: 1.5rem;
+  font-weight: bold;
   color: $text-color;
 }
 

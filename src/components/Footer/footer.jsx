@@ -6,7 +6,7 @@ export default function Footer() {
     <div>
       <footer>
         <div className="container-footer">
-          <span>@2022 Copyright ashishbasnet.com.np</span>
+          <span> Copyright @2022 ashishbasnet.com.np</span>
         </div>
       </footer>
     </div>

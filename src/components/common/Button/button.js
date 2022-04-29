@@ -9,7 +9,6 @@ const Button = styled.button`
   padding: 1rem;
   font-size: 1.1rem;
   font-family: Helvetica, sans-serif;
-  //position: relative;
   overflow: hidden;
   transition: 0.3s;
   &:hover {
