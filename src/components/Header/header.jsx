@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import "./header.scss";
-//import toggleImage from "../../assets/image/sun.jpg";
-//import logoImage from "../../assets/image/logo1.png";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Header(props) {
   const [isMobile, setMobile] = useState(false);
@@ -23,13 +21,13 @@ export default function Header(props) {
           >
             <ul>
               <li>
-                <Link to={props.data.link1Path}>{props.data.link1}</Link>
+                <NavLink  to={props.data.link1Path}>{props.data.link1}</NavLink>
               </li>
               <li>
-                <Link to={props.data.link2Path}>{props.data.link2}</Link>
+                <NavLink to={props.data.link2Path}>{props.data.link2}</NavLink>
               </li>
               <li>
-                <Link to={props.data.link3Path}>{props.data.link3}</Link>
+                <NavLink to={props.data.link3Path}>{props.data.link3}</NavLink>
               </li>
             </ul>
           </div>
