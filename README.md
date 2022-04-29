@@ -15,15 +15,15 @@ This project is simple portfolio site.
 ## Technologies
 
 Project is created with following packages:
-*  axios: ^0.26.1
-*  react: ^18.0.0
-*  react-dom: ^18.0.0
-*  react-router-dom: ^6.3.0
-*  react-scripts: 5.0.0
-*  react-easy-emoji: ^1.6.1
-*  sass: ^1.50.0
-*  sass-loader: ^12.6.0,
-*  styled-components: ^5.3.5,
+*  axios
+*  react
+*  react-dom
+*  react-router-dom
+*  react-scripts
+*  react-easy-emoji
+*  sass
+*  sass-loader
+*  styled-components
 
 	
 ## Setup
