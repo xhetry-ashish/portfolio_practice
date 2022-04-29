@@ -35,7 +35,7 @@ function Router() {
             element={
               <div>
                 <Projects />
-                <Footer />
+               
               </div>
             }
           />
@@ -44,7 +44,7 @@ function Router() {
             element={
               <div>
                 <Contact />
-                <Footer />
+               
               </div>
             }
           />
@@ -53,7 +53,7 @@ function Router() {
             element={
               <div>
                 <Services />
-                <Footer />
+                
               </div>
             }
           />
@@ -62,11 +62,12 @@ function Router() {
             element={
               <div>
                 <Resume />
-                <Footer />
+                
               </div>
             }
           />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   );
