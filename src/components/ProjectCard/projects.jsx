@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./projects.scss";
 import axios from "axios";
-import projectImage from '../../assets/image/cvprofile.jpg'
+import projectImage from '../../assets/image/github.png'
 
 function Projects() {
   const [project, setProject] = useState(null);

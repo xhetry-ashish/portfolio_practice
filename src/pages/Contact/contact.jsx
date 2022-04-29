@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import "./contact.scss";
 import axios from "axios";
 
@@ -16,12 +16,11 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if(Object.keys(formErrors).length !== 0){
-      handleChange();
-    }
-    else{
+    if (Object.keys(formErrors).length !== 0) {
+      e.handleChange();
+    } else {
       setIsSubmit(true);
-      if(isSubmit){
+      if (isSubmit) {
         const contact = {
           username: formValues.username,
           email: formValues.email,
@@ -38,7 +37,9 @@ function Contact() {
       }
     }
   };
- 
+  const checkValidate = () => {
+    setFormErrors(validate(formValues));
+  };
 
   const validate = (values) => {
     const errors = {};
@@ -65,7 +66,7 @@ function Contact() {
 
     return errors;
   };
-  
+
   return (
     <div>
       <h2>Contact Me</h2>
@@ -113,14 +114,14 @@ function Contact() {
             <p>Feel free to Message me..</p>
           </div>
           <div className="formInput">
-            <form action="" >
+            <form action="" onSubmit={handleSubmit}>
               <input
                 type="text"
                 name="username"
-                placeholder="Enter username.."
+                placeholder="Enter your username.."
                 value={formValues.username}
                 onChange={handleChange}
-                onBlur={() =>validate(formValues)}
+                onBlur={checkValidate}
               />
               <span style={{ color: "red" }}>{formErrors.username}</span>
               <input
@@ -129,7 +130,7 @@ function Contact() {
                 placeholder="Enter your email address.."
                 value={formValues.email}
                 onChange={handleChange}
-                onBlur={() => validate(formValues)}
+                onBlur={checkValidate}
               />
               <span style={{ color: "red" }}>{formErrors.email}</span>
               <textarea
@@ -138,12 +139,10 @@ function Contact() {
                 placeholder="Write something.."
                 value={formValues.message}
                 onChange={handleChange}
-                onBlur={() => validate(formValues)}
+                onBlur={checkValidate}
               ></textarea>
               <span style={{ color: "red" }}>{formErrors.message}</span>
-              <button onClick={handleSubmit}>
-               Send
-              </button>
+              <button type="submit">Send</button>
             </form>
           </div>
         </div>

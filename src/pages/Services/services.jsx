@@ -1,6 +1,8 @@
 import React from "react";
 import './services.scss'
-import node from '../../assets/image/nodejs.jpg'
+import mobile from '../../assets/image/mobileapp.png';
+import testing from '../../assets/image/testing.jpg';
+import web from '../../assets/image/web.jpg'
 
 function testimonial() {
   return (
@@ -9,7 +11,7 @@ function testimonial() {
       <div className="ser-container">
         <div className="ser-col">
           <div className="ser-img">
-            <img src={node} alt=''></img>
+            <img src={mobile} alt='no load'></img>
           </div>
           <span className="title">Mobile App Development</span>
           <span className="details">Delevering a quality responsive mobile app as of your need.</span>
@@ -17,7 +19,7 @@ function testimonial() {
 
         <div className="ser-col">
           <div className="ser-img">
-            <img src={node} alt=''></img>
+            <img src={web} alt='no load'></img>
           </div>
           <span className="title">Web App Development</span>
           <span className="details">Delevering a quality responsive web app as of your need. </span>
@@ -25,7 +27,7 @@ function testimonial() {
 
         <div className="ser-col">
           <div className="ser-img">
-            <img src={node} alt=''></img>
+            <img src={testing} alt='no load'></img>
           </div>
           <span className="title">Software Testing</span>
           <span className="details">Testing your developed system for more improvement and quality assurance</span>
