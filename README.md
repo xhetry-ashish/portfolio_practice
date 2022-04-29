@@ -30,7 +30,6 @@ Project is created with following packages:
 To run this project, install it locally using npm:
 
 ```
-$ cd ../frontend
 $ npm install
 $ npm start
 ```

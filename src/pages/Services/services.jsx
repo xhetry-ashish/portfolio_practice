@@ -30,7 +30,7 @@ function testimonial() {
             <img src={testing} alt='no load'></img>
           </div>
           <span className="title">Software Testing</span>
-          <span className="details">Testing your developed system for more improvement and quality assurance</span>
+          <span className="details">Test your developed system for more improvement and quality assurance</span>
         </div>
 
       </div>

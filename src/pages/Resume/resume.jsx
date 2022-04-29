@@ -137,7 +137,7 @@ function resume() {
                   <p>
                     Company: Optimum Futurist
                     <br />
-                    Roles: Developing application using React and NodeJS
+                    Roles: Developing application using React and NodeJS<br></br>
                     Location: Thapagaun, New Baneshwor, Kathmandu Nepal
                   </p>
                 </div>
