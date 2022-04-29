@@ -7,7 +7,7 @@ export const  headerData = {
       "toggleImageLight":require('../../assets/image/sun.jpg'),
       "toggleImageDark":require('../../assets/image/moon.png'),
       "link1": "Projects",
-      "link1Path":"/projects",
+      "link1Path":"/project",
       "link2": "Contact",
       "link2Path":"/contact",
       "link3": "Services ",
