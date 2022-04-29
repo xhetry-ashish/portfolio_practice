@@ -14,7 +14,7 @@ This project is simple portfolio site.
 	
 ## Technologies
 
-Project is created with:
+Project is created with following packages:
 *  axios: ^0.26.1
 *  react: ^18.0.0
 *  react-dom: ^18.0.0
