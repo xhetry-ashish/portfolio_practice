@@ -1,5 +1,4 @@
-@import '../../styles/Sass/variable';
-
+@import "../../styles/Sass/variable";
 
 .profile-container {
   margin-top: 17vh;
@@ -7,7 +6,7 @@
   align-items: center;
   text-align: center;
   justify-content: center;
-  min-height: 80vh;
+  min-height: 70vh;
 }
 
 .profile-parent {
@@ -15,15 +14,12 @@
   align-items: center;
   color: rgb(27, 26, 23);
 }
-
-.profile-details-name {
-
-  font-size: 24px;
-  font-family: "Poppins SemiBold";
+.profile-details {
+  margin-top: 5vh;
 }
-
-.wave-emoji{
-  font-size: 3rem;
+.profile-details-name {
+  font-size: 24px;
+  font-family: $myFont;
 }
 
 .profile-details-role {
@@ -37,46 +33,13 @@
   font-family: cursive;
 }
 
-.profile-details .wave-emoji {
-  margin-top: 2%;
-  animation-duration: 1.8s;
-  animation-iteration-count: infinite;
-  animation-name: wave;
-  display: inline-block;
-  height: 5vh;
-  width: 10vw;
-  transform-origin: 70% 70%;
-}
-
-@keyframes wave {
-  0% {
-    transform: rotate(0deg);
-  }
-  10% {
-    transform: rotate(-10deg);
-  }
-  20% {
-    transform: rotate(12deg);
-  }
-  30% {
-    transform: rotate(-10deg);
-  }
-  40% {
-    transform: rotate(9deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
 .primary-text {
+  font-size: 1.5rem;
   color: $text-color;
 }
 
 .highlighted-text {
+  font-size: 2rem;
   color: white;
 }
 
@@ -117,7 +80,6 @@
   transition: 1s ease-out;
 }
 
-
 @media screen and (max-width: 1110px) {
   .profile-picture {
     margin: 0 0 0 80px;
@@ -135,7 +97,6 @@
     width: 120px;
     padding: 11px 0;
     z-index: 700;
-   
   }
 }
 
