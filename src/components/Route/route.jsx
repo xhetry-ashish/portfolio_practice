@@ -22,7 +22,7 @@ function Router() {
             exact
             element={
               <div>
-                <Profile data={profileData["profile-1"]} /> 
+                <Profile data={profileData["profile-1"]} />
               </div>
             }
           ></Route>
@@ -30,12 +30,43 @@ function Router() {
             path="/home"
             element={<Profile data={profileData["profile-1"]} />}
           />
-          <Route path="/project" element={<Projects />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/resume" element={<Resume />} />
+          <Route
+            path="/project"
+            element={
+              <div>
+                <Projects />
+                <Footer />
+              </div>
+            }
+          />
+          <Route
+            path="/contact"
+            element={
+              <div>
+                <Contact />
+                <Footer />
+              </div>
+            }
+          />
+          <Route
+            path="/services"
+            element={
+              <div>
+                <Services />
+                <Footer />
+              </div>
+            }
+          />
+          <Route
+            path="/resume"
+            element={
+              <div>
+                <Resume />
+                <Footer />
+              </div>
+            }
+          />
         </Routes>
-        <Footer></Footer>
       </BrowserRouter>
     </div>
   );

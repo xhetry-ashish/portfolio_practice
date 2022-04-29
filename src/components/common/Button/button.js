@@ -12,6 +12,9 @@ const Button = styled.button`
   //position: relative;
   overflow: hidden;
   transition: 0.3s;
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 export default Button;
