@@ -29,7 +29,7 @@ function Contact() {
           message: formValues.message,
         };
         axios
-          .post(`http://localhost:3001/api/v1/contact`, contact)
+          .post(`https://floating-falls-49210.herokuapp.com/api/v1/contact`, contact)
           .then((res) => {
             if (res.data.mailSent) {
               setFormValues(initialValues);

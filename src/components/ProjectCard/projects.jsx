@@ -10,8 +10,7 @@ function Projects() {
   useEffect(() => {
     setLoading(true);
     axios
-      //.get("https://api.github.com/users/xhetry-ashish/repos")
-      .get("http://localhost:3001/api/v1/github/")
+      .get("https://floating-falls-49210.herokuapp.com/api/v1/github/")
       .then((res1) => {
             setProject(res1.data.data);
             setLoading(false);
@@ -35,7 +34,7 @@ function Projects() {
                 </div>
                 <h3>{item.projectname.toUpperCase()}</h3>
                 <p>{item.description}</p>
-                <p>{new Date(item.dateCreated).toDateString()}</p>
+                <p>Date Created: {new Date(item.dateCreated).toDateString()}</p>
                 <a
                   href={item.githubLink}
                   target="_blank"
