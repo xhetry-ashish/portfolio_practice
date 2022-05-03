@@ -4,15 +4,22 @@
   margin-top: 3vh;
   width: 100vw;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 10vh;
+  height: 8vh;
   background-color: $navbar-color;
+  column-gap: 2px;
+  position: fixed;
+  bottom: 0;
 
   span {
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     font-size: 100%;
+    column-gap: 5px;
     width: 100vw;
     color: white;
   }

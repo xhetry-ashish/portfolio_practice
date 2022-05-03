@@ -6,7 +6,8 @@ export default function Footer() {
     <div>
       <footer>
         <div className="container-footer">
-          <span> Copyright @2022 ashishbasnet.com.np</span>
+         
+          <span> <i class="fas fa-copyright"></i> Copyright 2022 All rights preserved</span>
         </div>
       </footer>
     </div>

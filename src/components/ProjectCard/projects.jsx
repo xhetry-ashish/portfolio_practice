@@ -34,7 +34,7 @@ function Projects() {
                 </div>
                 <h3>{item.projectname.toUpperCase()}</h3>
                 <p>{item.description}</p>
-                <p>Date Created: {new Date(item.dateCreated).toDateString()}</p>
+                <p className="date">Date Created: {new Date(item.dateCreated).toDateString()}</p>
                 <a
                   href={item.githubLink}
                   target="_blank"
