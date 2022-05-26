@@ -24,6 +24,7 @@ Project is created with following packages:
 *  sass
 *  sass-loader
 *  styled-components
+*  react-redux
 
 	
 ## Setup
